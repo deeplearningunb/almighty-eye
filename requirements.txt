@@ -3,5 +3,6 @@ Matplotlib==3.1.0
 opencv-contrib-python==4.1
 scikit-learn==0.21.2
 imutils==0.5.2
-
+tk==8.6.8
+pillow==6.0.0
 
