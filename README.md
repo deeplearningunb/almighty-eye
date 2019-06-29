@@ -1,5 +1,5 @@
 # Almighty-Eye
-A facial recognition system.  The system is capable of recognizing faces in a live video stream, and to identify pre-trained  faces.
+A facial recognition system.  The system is capable of recognizing faces in a live video stream, and to identify pre-trained faces.
 	![Recognition](screenshot.png)
 
 ## Setting up environment with Anaconda
@@ -24,7 +24,7 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 	3.Run `model.py` file to training the model.
 	4. Run `main.py` to start the recognition
 	
-##References
+## References
 	1. Tutorial in image search engines in ['PyImageSearch'](https://www.pyimagesearch.com/).
 	2. System for Face verification:
 		 see: ['FaceNet: A Unified Embeddings for Face Recognition and Clustering'](https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf)
