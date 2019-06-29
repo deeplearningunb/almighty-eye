@@ -7,8 +7,15 @@ import time
 import cv2
 import os
 import model
+import tkinter as tki
+from tkinter import font
+import cv2
+from PIL import Image, ImageTk
 
 
+def train_new_DNN():
+	data = model.extract_embeddings()
+	model.train_DNN(data)
 
 
 protoPath = os.path.join("dnn/deploy.prototxt")
@@ -19,12 +26,7 @@ recognizer = pickle.loads(open('serializedFiles/recognizer.pickle', 'rb').read()
 le = pickle.loads(open('serializedFiles/le.pickle', 'rb').read())
 
 
-def train_model():
-	data = model.extract_embeddings()
-	model.train_DNN(data)
-
-
-def star_camera():
+def start_camera():
     vs = VideoStream(src=0).start()
     time.sleep(2.0)
 
@@ -32,7 +34,9 @@ def star_camera():
 
     while True:
         frame = vs.read()
+        print(type(frame))
         frame = imutils.resize(frame, width=600)
+
         (h, w) = frame.shape[:2]
         imageBlob = cv2.dnn.blobFromImage(
             cv2.resize(frame, (300, 300)), 1.0, (300, 300),
@@ -81,4 +85,32 @@ def star_camera():
     vs.stop()
 
 
-star_camera()
+
+
+janela = tki.Tk()
+janela.title("Almigthy eye")
+janela["bg"] = "gray"
+
+camera = tki.Label(janela)
+camera.place(x=300, y=70)
+
+janela.bind('<Escape>', lambda e: janela.quit())
+
+arial = font.Font(family='Arial', size=18, weight='normal')
+
+bt_cam = tki.Button(janela, width=20, text="Iniciar Câmera", font=arial,
+                    bg="LightBlue", highlightbackground="Black",
+                    highlightcolor="Black", command=start_camera)
+
+bt_train_model = tki.Button(janela, width=20, text="Treinar Novo Dataset", font=arial,
+                    bg="LightBlue", highlightbackground="Black",
+                    highlightcolor="Black", command=train_new_DNN)
+bt_train_model.place(x = 20, y = 10)
+bt_cam.place( x = 20, y = 30)
+
+
+
+#<largura>x<altura>+<dist_esquerda>+<dist_topo>
+janela.geometry("300x300+150+100")
+
+janela.mainloop()

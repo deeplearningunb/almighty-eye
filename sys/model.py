@@ -24,7 +24,7 @@ def extract_embeddings():
     #Reading names and images from the dataset directory
     names = []
     faces = []
-      for i, imagePath in enumerate(imagesPaths):
+    for i, imagePath in enumerate(imagesPaths):
 
         name = imagePath.split(os.path.sep)[-2]
         image = cv2.imread(imagePath)
