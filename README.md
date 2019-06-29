@@ -31,6 +31,7 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 2. Put pictures of her face inside the folder.
 3.Run `model.py` file to training the model.
 4. Run `main.py` to start the recognition
+*note: we recommend you to get at least 20 images on each dataset
 	
 ## References
 1.  Image search engines tutorials [`PyImageSearch`](https://www.pyimagesearch.com/).
