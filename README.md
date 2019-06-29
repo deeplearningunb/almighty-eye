@@ -3,7 +3,7 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 	![Recognition](screenshot.png)
 
 ## Setting up environment with Anaconda
-	1. Install ['Anaconda'](https://docs.conda.io/en/latest/) to do this.
+	1. Install [`Anaconda`](https://docs.conda.io/en/latest/) to do this.
 	2. Create `Almighty-eye` environment.
 	3. run `pip install -r requirements.txt` to install the necessary libraries
 	4. Activate you virtual environment `conda activate almighty-eye`
@@ -25,11 +25,11 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 	4. Run `main.py` to start the recognition
 	
 ## References
-	1. Tutorial in image search engines in ['PyImageSearch'](https://www.pyimagesearch.com/).
+	1. Tutorial in image search engines in [`PyImageSearch`](https://www.pyimagesearch.com/).
 	2. System for Face verification:
-		 see: ['FaceNet: A Unified Embeddings for Face Recognition and Clustering'](https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf)
+		 see: [`FaceNet: A Unified Embeddings for Face Recognition and Clustering`](https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf)
 	2. The database used to train the Not Recognized persons:
-	see: ['allfaces'](https://cswww.essex.ac.uk/mv/allfaces/index.html)
+	see: [`allfaces`](https://cswww.essex.ac.uk/mv/allfaces/index.html)
 
 	
 
