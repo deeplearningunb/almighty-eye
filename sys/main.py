@@ -8,8 +8,7 @@ import cv2
 import os
 import model
 
-data = model.extract_embeddings()
-model.train_DNN(data)
+
 
 
 protoPath = os.path.join("dnn/deploy.prototxt")
@@ -19,6 +18,10 @@ DNN = cv2.dnn.readNetFromTorch('openface_DNN_model.small2.v1.t7')
 recognizer = pickle.loads(open('serializedFiles/recognizer.pickle', 'rb').read())
 le = pickle.loads(open('serializedFiles/le.pickle', 'rb').read())
 
+
+def train_model():
+	data = model.extract_embeddings()
+	model.train_DNN(data)
 
 
 def star_camera():

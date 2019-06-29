@@ -24,17 +24,16 @@ def extract_embeddings():
     #Reading names and images from the dataset directory
     names = []
     faces = []
-
-    for i, imagePath in enumerate(imagesPaths):
+      for i, imagePath in enumerate(imagesPaths):
 
         name = imagePath.split(os.path.sep)[-2]
         image = cv2.imread(imagePath)
         image = imutils.resize(image , width=600)
         (h, w) = image.shape[:2]
-
+        
         #TODO : BlobFromImage
-        #BlobFromImage:
             #Provide mean subusctraction , scaling and channel swapping
+            
         imageBlob = cv2.dnn.blobFromImage(
             image = cv2.resize(image, (300, 300)),
             scalefactor = 1.0, swapRB= False, crop=False)
