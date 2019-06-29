@@ -70,12 +70,6 @@ def extract_embeddings():
 
 
 
-
-
-
-
-
-
 def train_DNN(data):
     data = pickle.loads(open('serializedFiles/faces.pickle', 'rb').read())
 
@@ -83,7 +77,7 @@ def train_DNN(data):
     labels = le.fit_transform(data['names'])
 
     recognize = SVC(C=1.0 , kernel='linear', probability=True)
-    recognize.fit(extract_embeddings()['faces'], labels)
+    recognize.fit(data['faces'], labels)
 
     fp = open('serializedFiles/recognize.pickle', 'wb')
     fp.write(pickle.dumps(recognize))
