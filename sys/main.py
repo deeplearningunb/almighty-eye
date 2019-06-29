@@ -106,11 +106,11 @@ bt_train_model = tki.Button(janela, width=20, text="Treinar Novo Dataset", font=
                     bg="LightBlue", highlightbackground="Black",
                     highlightcolor="Black", command=train_new_DNN)
 bt_train_model.place(x = 20, y = 10)
-bt_cam.place( x = 20, y = 30)
+bt_cam.place( x = 20, y = 60)
 
 
 
 #<largura>x<altura>+<dist_esquerda>+<dist_topo>
-janela.geometry("300x300+150+100")
+janela.geometry("300x120+150+100")
 
 janela.mainloop()

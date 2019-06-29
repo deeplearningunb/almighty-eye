@@ -12,6 +12,8 @@ A facial recognition system.  The system is capable of recognizing faces in a li
     ```pip install -r requirements.txt```
   6. Install openCV through conda command:  
     ```conda install -c conda-forge opencv```
+  7. Install pillow through conda command:
+    ```conda install -c conda pillow```
   
 	
 ## Create a dataset directory
@@ -19,7 +21,7 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 2. In the `dataset/` directory create folders with the name of the person to be identified
 	
 	
-## Run program
+## Run programq
 1. Run in the terminal with the virtual environment activate: `python3 main.py`
 2. In the camera open, press `q` to exit program
 	
