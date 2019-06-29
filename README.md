@@ -3,10 +3,16 @@
 A facial recognition system.  The system is capable of recognizing faces in a live video stream, and to identify pre-trained faces.
 
 ### Setting up environment with Anaconda
-1. Install [`Anaconda`](https://docs.conda.io/en/latest/) to do this.
-2. Create `Almighty-eye` environment.
-3. run `pip install -r requirements.txt` to install the necessary libraries
-4. Activate you virtual environment `conda activate almighty-eye`
+  1. Install [`Anaconda`](https://docs.conda.io/en/latest/) to do this.
+  2. Create `Almighty-eye` environment. Run on terminal:  
+      ```conda create -n your_env_name python=3.6```
+  3. Activate the environment with:  
+    ```conda activate your_env_name```  
+  5. Install the necessary libraries. Into the folder of the project, run:  
+    ```pip install -r requirements.txt```
+  6. Install openCV through conda command:  
+    ```conda install -c conda-forge opencv```
+  
 	
 ## Create a dataset directory
 1. Inside the `sys/` directory, create a `dataset/` folder.
