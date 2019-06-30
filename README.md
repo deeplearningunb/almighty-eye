@@ -29,7 +29,7 @@ A facial recognition system.  The system is capable of recognizing faces in a li
 ## Training a new model model
 1. Create a folder inside dataset with the name of the person.
 2. Put pictures of her face inside the folder.
-3.Run `model.py` file to training the model.
+3. Run `model.py` file to training the model.
 4. Run `main.py` to start the recognition
 *note: we recommend you to get at least 20 images on each dataset
 	
